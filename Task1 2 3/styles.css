@@ -1,0 +1,120 @@
+/* Basic Styles */
+/*Task2*/
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #e9e9ef;
+    color: #1276cd;
+    font-size: 18px;
+}
+
+header {
+    background: #1a2be4;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: color 0.3s;
+   text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #02131f;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+h2{
+    font-size: 2rem;
+    font-weight: 700;
+}
+p{
+    color: #02131f;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#about img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    float: right;
+    margin-left: 1rem;
+}
+
+.project img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 1rem;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f4f4;
+    color: #060000;
+    font-size: 1rem;
+}
+/* Task3 */
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #about img {
+        float: none;
+        display: block;
+        margin: 1rem auto;
+    }
+
+    .project img {
+        margin: 0 auto;
+    }
+}
