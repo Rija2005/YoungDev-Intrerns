@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="form-container">
+            <form name="form" onsubmit="return validateAndSubmitForm()">
+                <h1>Registration Form</h1>
+                <div class="box">
+                    <label for="fname">Full Name:</label>
+                    <input type="text" name="name" id="fname" placeholder="Enter your full name">
+                    <div class="error" id="nameErr"></div>
+                </div>
+
+                <div class="box">
+                    <label for="fphone">Phone No:</label>
+                    <input type="text" name="phone" id="fphone" placeholder="Enter your phone no." maxlength="10">
+                    <div class="error" id="phoneErr"></div>
+                </div>
+
+                <div class="box">
+                    <label for="femail">Email Address:</label>
+                    <input type="email" name="email" id="femail" placeholder="Enter your email">
+                    <div class="error" id="emailErr"></div>
+                </div>
+
+                <div class="box password">
+                    <label for="fpass">Password:</label>
+                    <input type="password" name="password" id="fpass" placeholder="Enter your password">
+                    <i id="togglePass" class="fa-solid fa-eye-slash" onclick="togglePasswordVisibility('fpass', 'togglePass')"></i>
+                    <div class="error" id="passErr"></div>
+                </div>
+
+                <div class="box password">
+                    <label for="fcpass">Confirm Password:</label>
+                    <input type="password" name="confirm-password" id="fcpass" placeholder="Confirm your password">
+                    <i id="toggleConfirmPass" class="fa-solid fa-eye-slash" onclick="togglePasswordVisibility('fcpass', 'toggleConfirmPass')"></i>
+                    <div class="error" id="cPassErr"></div>
+                </div>
+
+                <div class="box">
+                    <label for="fdate">Birth Date:</label>
+                    <input type="date" name="date" id="fdate">
+                    <div class="error" id="dateErr"></div>
+                </div>
+
+                <div class="box">
+                    <label for="gender">Gender:</label>
+                    <select id="gender">
+                        <option value="" selected disabled>Select your gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <div class="error" id="genderErr"></div>
+                </div>
+
+                <div class="box submit-btn">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
